@@ -1,4 +1,4 @@
-"use server"
+"use server";
 
 import { db } from "@/lib/database";
 
@@ -25,5 +25,19 @@ export const getUserById = async (id: string) => {
     return user;
   } catch (error) {
     return null;
+  }
+};
+
+export const deleteUserById = async (id: string) => {
+  try {
+    await db.user.delete({
+      where: {
+        id,
+      },
+    });
+
+    return { success: "Deleted successfully!" };
+  } catch (error) {
+    return { error: "Something went wrong!" };
   }
 };

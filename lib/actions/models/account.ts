@@ -13,14 +13,14 @@ export const getAccountsByUserId = async (userId: string) => {
   }
 };
 
-export const getUserById = async (id: string) => {
+export const deleteAccountsByUserId = async (userId: string) => {
   try {
-    const user = await db.user.findUnique({
+    return await db.account.deleteMany({
       where: {
-        id,
+        userId,
       },
     });
-    return user;
+
   } catch (error) {
     return null;
   }

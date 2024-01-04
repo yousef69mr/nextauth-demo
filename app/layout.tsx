@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Toaster } from "sonner";
 const poppins = Poppins({ subsets: ["latin"], weight: ["600"] });
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         )}
       >
         <div className="w-full min-h-screen flex items-center justify-center">
+          <Toaster/>
           {children}
         </div>
       </body>
