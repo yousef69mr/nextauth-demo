@@ -66,7 +66,7 @@ const SettingsForm = (props: Props) => {
           }
 
           if (data?.success) {
-            form.reset();
+            // form.reset();
             setSuccess(data?.success);
           }
         })

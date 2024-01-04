@@ -9,7 +9,7 @@ const NewPasswordPage = () => {
       backButtonLabel="Back to login"
       backButtonHref="/auth/login"
     >
-     <NewPasswordForm/>
+      <NewPasswordForm />
     </CardWrapper>
   );
 };

@@ -8,7 +8,7 @@ const NewVerificationPage = () => {
       backButtonLabel="Back to login"
       backButtonHref="/auth/login"
     >
-     <NewVerificationForm/>
+      <NewVerificationForm />
     </CardWrapper>
   );
 };
